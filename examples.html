@@ -1,0 +1,728 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>EDL Elements</title>
+<link rel="stylesheet" type="text/css" href="css/edl.base.css?v=1.1" />
+<link rel="stylesheet" type="text/css" href="css/edl.elements.css?v=1.1" />
+</head>
+
+<body>
+<div class="edl-header clearfix">
+    <div class="edl-nav--utility clearfix">
+        <ul class="off-lft">
+            <li><a href="#">Utility Item</a></li>
+            <li><a href="#">Utility Item</a></li>
+            <li><a href="#">Utility Item</a></li>
+            <li><a href="#">Utility Item</a></li>
+        </ul>
+    </div>
+    <div class="edl-header--main clearfix">
+        <div class="edl-logo">
+            <img src="img/sabre-logo-slab.png" width="auto" height="auto">
+        </div>
+        <div class="edl-nav--main">
+            <ul>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li><a href="#">Menu Item</a></li>
+                <li>
+                    <a href="#">Dropdown Item</a>
+                    <ul class="edl-nav--sub">
+                        <li><a href="#">Dropdown Sub Item Long line here</a></li>
+                        <li><a href="#">Dropdown Sub Item</a></li>
+                        <li><a href="#">Dropdown Sub Item</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Item</a></li>
+            </ul>
+        </div>
+
+        <div class="edl-hamburger">
+            <a href="#"><i class="edl-icon--menu-hamburger edl-icon-line edl-icon"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<div class="edl-content">
+<div class="edl-section container-fluid">
+<h3>Typography</h3>
+<div class="inner">
+    <h4>Headlines</h4>
+    <h1 class="txt-slate">Headline H1  - Slate</h1>
+    <h2 class="txt-green">Headline H2 - Green</h2>
+    <h3>Headline H3</h3>
+    <h4>Headline H4</h4>
+    <h5>Headline H5</h5>
+    <h6>Headline H6</h6>
+
+    <br />
+    <br />
+    <h4>Body text</h4>
+    <p>Paragraph text...lorem ipsum dolor sit amet, <b>bolded text</b> consectetur adipiscing elit. <em>italic text</em> Aenean quis augue ultricies, tempus lorem sed, volutpat dolor. Praesent tristique arcu a ex efficitur, eget rhoncus eros tempus. Sed ultricies mauris in mauris aliquam, sit amet pulvinar dui aliquam. Integer id nibh in dolor venenatis gravida ac id ante. Phasellus eleifend efficitur ante id commodo. Vestibulum ut porta velit, in sodales diam. Nulla maximus porta tellus nec tincidunt. Duis diam mi, posuere nec nibh ut, mattis malesuada magna. Curabitur mollis sagittis dolor, sed molestie erat finibus ut. Sed at vulputate neque, sed imperdiet lorem.</p>
+    <p>
+        <a href="#">Hyperlink text</a><br />
+        <a href="#">New tab hyperlink &raquo;</a>
+    </p>
+
+<br />
+<br />
+<h4>Lists</h4>
+<p>Ordered List</p>
+<ol>
+    <li>Ordered list item</li>
+    <li>Ordered list item</li>
+    <li>Ordered list item</li>
+    <li>Ordered list item</li>
+</ol>
+
+<p>Unordered List</p>
+<ul>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+    <li>Unordered list item</li>
+</ul>
+</div>
+</div>
+
+<div class="edl-section container-fluid">
+<h3>Navigation elements</h3>
+<div class="row">
+    <div class="col-sm-3">
+        <h4>Panel navigation</h4>
+        <ul class="edl-nav--panel">
+            <li><a href="#">Primary nav item</a></li>
+            <li>
+                <a href="#">Primary nav item</a>
+                <ul class="edl-nav--sub">
+                    <li><a href="#">Secondary nav item</a></li>
+                    <li>
+                        <a href="#">Secondary nav item</a>
+                        <ul class="edl-nav--tert">
+                            <li><a href="#">Terchiary nav item</a></li>
+                            <li><a href="#">Terchiary nav item</a></li>
+                            <li><a href="#">Terchiary nav item</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Secondary nav item</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Primary nav item</a></li>
+            <li><a href="#">Primary nav item</a></li>
+            <li><a href="#">Primary nav item</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4>Breadcrumbs</h4>
+        <p class="edl-breadcrumbs"><a href="/">home</a> » <a href="/insights">insights</a> » <a href="#">current page here</a><span class="crumb-grad"></span></p>
+    </div>
+</div>
+</div>
+
+
+
+<div class="edl-section container-fluid">
+<h3>Form elements</h3>
+<h4>Form with dynamic labels</h4>
+<form class="edl-form">
+    <p>
+        <label class="edl-label" for="name">Full name</label>
+        <input type="text" name="name" value="test" />
+    </p>
+    <p>
+        <label class="edl-label" for="email">Email address</label>
+        <input type="email" name="email" />
+    </p>
+    <p>
+        <label class="edl-label" for="comments">Comments</label>
+        <textarea name="comments"></textarea>
+    </p>
+    <p class="edl-select">
+        <label class="edl-label" for="sample">What should you choose?</label>
+        <select name="sample">
+            <option selected="selected" disabled="disabled"></option>
+            <option>This is the first option</option>
+            <option>This is the second option and far longer</option>
+            <option>This is the third option</option>
+        </select>
+    </p>
+</form>
+<br /><br />
+<h4>Form default</h4>
+<form class="edl-form--default">
+    <p>
+        <label for="name">Full name</label>
+        <input type="text" name="name" value="test" />
+    </p>
+    <p>
+        <label for="email">Email address</label>
+        <input type="email" name="email" />    </p>
+    <p>
+        <label for="comments">Comments</label>
+        <textarea name="comments"></textarea>
+    </p>
+    <p class="custom-select">
+        <label for="sample">What should you choose?</label>
+        <select name="sample">
+            <option selected="selected" disabled="disabled">Select one</option>
+            <option>This is the first option</option>
+            <option>This is the second option and far longer</option>
+            <option>This is the third option</option>
+        </select>
+    </p>
+</form>
+
+<br />
+<br />
+<h4>Buttons</h4>
+<p><input type="submit" value="Primary"/></p>
+<p><a class="button button-secondary">Secondary</a></p>
+<p><a class="button button-light">Light Button</a></p>
+<p><button disabled>Disabled</button></p>
+</div>
+
+
+<div class="edl-section container-fluid">
+    <h3>Messages</h3>
+    <h4>Success</h4>
+    <div class="edl-message edl-message--success">
+        <i class="edl-icon--check edl-icon edl-message--icon"></i>
+        <p><span>Successful message!</span> You have submitted an entry.</p>
+    </div>
+
+    <h4>Warning</h4>
+    <div class="edl-message edl-message--warning">
+        <i class="edl-icon--alert-triangle edl-icon edl-message--icon"></i>
+        <p><span>Warning message!</span> Are you sure you want to continue?</p>
+    </div>
+
+    <h4>Error</h4>
+    <div class="edl-message edl-message--error">
+        <i class="edl-icon--close edl-icon edl-message--icon"></i>
+        <p><span>Error message!</span> You have not saved your session.</p>
+    </div>
+
+    <div class="edl-notice edl-notice--fixed">
+        <p>This is an important notice that will always appear at the bottom of the window!</p>
+        <i class="edl-icon--close edl-icon edl-notice--icon"></i>
+    </div>
+</div>
+
+
+<div class="edl-section container-fluid">
+<h3>Content Containers</h3>
+    <div class="inner">
+        <div class="edl-expand">
+            <h4>Expand &amp; Collapse</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibus, condimentum est vel, pellentesque urna. Morbi suscipit consectetur sem. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam.</p>
+            <div class="edl-expand--content">
+                <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+            </div>
+            <a href="#" class="edl-expand--action button button-sml button-light">View more +</a>
+        </div>
+        <div class="edl-expand">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibus, condimentum est vel, pellentesque urna. Morbi suscipit consectetur sem. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam.</p>
+            <div class="edl-expand--content">
+                <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+            </div>
+            <a href="#" class="edl-expand--action">View more +</a>
+        </div>
+        <br />
+        <div class="edl-accordion">
+            <h4>Accordion</h4>
+            <div class="edl-accordion--item">
+                <div class="edl-accordion--action">
+                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibue</b></p>
+                </div>
+                <div class="edl-accordion--content">
+                    <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+                </div>
+            </div>
+            <div class="edl-accordion--item">
+                <div class="edl-accordion--action">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibue</p>
+                </div>
+                <div class="edl-accordion--content">
+                    <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+                    <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+                </div>
+            </div>
+            <div class="edl-accordion--item">
+                <div class="edl-accordion--action">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibue</p>
+                </div>
+                <div class="edl-accordion--content">
+                    <p>Curabitur placerat velit a purus dictum tincidunt. Pellentesque ornare sollicitudin tristique. Fusce eu feugiat arcu. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam. Aliquam aliquet ante eu porttitor eleifend. Proin efficitur libero nec ligula lobortis tempor elementum in dui. Donec et erat feugiat sapien dapibus facilisis eget non arcu. Aliquam nec pretium sem, nec molestie purus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<br />
+<br />
+<h4>Cards - Default</h4>
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="edl-card">
+                <div class="edl-card--thumbnail">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a>
+                </div>
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#contenttype link">Blog</a></p>
+                    <a href="#"><h6>Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibus, condimentum est vel, pellentesque urna. Morbi suscipit consectetur sem. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam.</p>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a>
+                    <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="edl-card">
+                <div class="edl-card--thumbnail">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a>
+                </div>
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#blog">Blog</a></p>
+                    <a href="#"><h6>Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a>
+                    <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="edl-card">
+                <div class="edl-card--thumbnail">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a>
+                </div>
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#blog">Blog</a></p>
+                    <a href="#"><h6>Android vs Apple: Brazilian travelers embrace connectivity with 14% increase in TripCase downloads Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a>
+                    <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="edl-section bkg-grey-light">
+    <div class="inner container-fluid">
+<h4>Cards - Light</h4>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="edl-card edl-card-light">
+                <div class="edl-card--thumbnail">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a>
+                </div>
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#blog">Blog</a></p>
+                    <a href="#"><h6>Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut mauris faucibus, condimentum est vel, pellentesque urna. Morbi suscipit consectetur sem. Pellentesque nisi risus, varius ut ipsum nec, interdum hendrerit quam.</p>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a>
+                    <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="edl-card edl-card-light">
+                <div class="edl-card--thumbnail">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a>
+                </div>
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#blog">Blog</a></p>
+                    <a href="#"><h6>Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a>
+                    <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="edl-card edl-card-light">
+                <div class="edl-card--thumbnail">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a>
+                </div>
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#blog">Blog</a></p>
+                    <a href="#"><h6>Android vs Apple: Brazilian travelers embrace connectivity with 14% increase in TripCase downloads Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="edl-section container-fluid">
+<h4>Cards - Compact</h4>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="edl-card edl-card-min">
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#releases">Press Release</a></p>
+                    <a href="#"><h6>Android vs Apple: Brazilian travelers embrace connectivity with 14% increase in TripCase downloads Android vs Apple: Brazilian travelers embrace connectivity with 14% increase in TripCase downloads</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="edl-card edl-card-min">
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#release">Press Release</a></p>
+                    <a href="#"><h6>Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="edl-section bkg-grey-light">
+    <div class="inner container-fluid">
+<h4>Cards - Compact - Light</h4>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="edl-card edl-card-min edl-card-light">
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#release">Press Release</a></p>
+                    <a href="#"><h6>Android vs Apple: Brazilian travelers embrace connectivity with 14% increase in TripCase downloads Android vs Apple: Brazilian travelers embrace connectivity with 14% increase in TripCase downloads</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="edl-card edl-card-min edl-card-light">
+                <div class="edl-card--content">
+                    <p class="edl-card--content-type"><a href="#release">Press Release</a></p>
+                    <a href="#"><h6>Lorem ipsum dolor sit consectetur adipiscing</h6></a>
+                </div>
+                <div class="edl-card--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="edl-section container-fluid">
+<h4>Panels</h4>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <h4>Lorem ipsum dolor sit consectetur adipiscing dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <h4>Lorem ipsum dolor sit consectetur adipiscing dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <a href="#"><img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /></a><br />
+                    <h4>Panel with image &amp; link</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                    <p><a href="#">Learn more &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <img src="img/thumbnail_placeholder.jpg" width="auto" height="auto"  /><br />
+                    <h4>Panel with image &amp; button</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                    <p><a href="#" class="edl-expand-action button button-sml">Learn more &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <h4>Lorem ipsum dolor sit consectetur adipiscing dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                </div>
+                <div class="edl-panel--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <h4>Lorem ipsum dolor sit consectetur adipiscing dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                </div>
+                <div class="edl-panel--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="edl-panel">
+                <div class="edl-panel--content">
+                    <h4>Lorem ipsum dolor sit consectetur adipiscing dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                </div>
+                <div class="edl-panel--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h4>Panel Lists</h4>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="edl-panel-list">
+                <div class="edl-panel--content">
+                    <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus</a></p>
+                </div>
+                <div class="edl-panel--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+            <div class="edl-panel-list">
+                <div class="edl-panel--content">
+                    <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus</a></p>
+                </div>
+                <div class="edl-panel--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+            <div class="edl-panel-list">
+                <div class="edl-panel--content">
+                    <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus</a></p>
+                </div>
+                <div class="edl-panel--meta">
+                    <a href="#">Category</a> <span>May 4, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br />
+<br />
+<h4>Tabs</h4>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="edl-tab">
+                <ul class="edl-tab--nav clearfix">
+                    <li class="active"><a href="#">Tab One</a></li>
+                    <li><a href="#">Tab Two</a></li>
+                    <li><a href="#">Tab Three</a></li>
+                </ul>
+                <ul class="edl-tab--panels">
+                    <li class="edl-panel active">
+                        <div class="edl-panel--content">
+                            <h4>Tab 1</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                        </div>
+                    </li>
+                    <li class="edl-panel">
+                        <div class="edl-panel--content">
+                            <h4>Tab 2</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                        </div>
+                    </li>
+                    <li class="edl-panel">
+                        <div class="edl-panel--content">
+                            <h4>Tab 3</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis felis lectus, eu molestie metus dictum in. Morbi a nulla id orci vehicula viverra. Aenean arcu nulla, convallis et quam vitae, vestibulum tempor lorem.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="edl-footer clearfix">
+    <div class="edl-footer-logo">
+        <img src="img/sabre-footer-logo.png" width="auto" height="auto" style="width:auto;">
+    </div>
+
+    <div class="edl-nav--footer">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News &amp; Insights</a></li>
+            <li><a href="#">Investor Center</a></li>
+        </ul>
+    </div>
+
+    <div class="edl-social off-rt">
+        <ul>
+            <li><a href="#"><i class="edl-icon--social-twitter edl-icon" alt="Twitter"></i></a></li>
+            <li><a href="#"><i class="edl-icon--social-facebook edl-icon" alt="Facebook"></i></a></li>
+            <li><a href="#"><i class="edl-icon--social-youtube edl-icon" alt="YouTube"></i></a></li>
+            <li><a href="#"><i class="edl-icon--social-linkedin edl-icon" alt="Linked In"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="edl-nav--mega">
+    <div class="edl-nav--utility-spacer"></div>
+    <div class="edl-header--main clearfix bkg-black">
+        <div class="edl-logo col-sm-3 clearfix">
+            <img src="img/sabre-logo-meganav.jpg" width="auto" height="auto">
+        </div>
+        <div class="edl-search col-sm-6 clearfix">
+            <form name="searchform">
+                <input class="edl-input" type="text" name="search" placeholder="Site search..." />
+                <input class="button" type="submit" value="Search" />
+            </form>
+        </div>
+        <div class="edl-hamburger">
+            <a href="#"><i class="edl-icon--close edl-icon-line edl-icon"></i></a>
+        </div>
+    </div>
+
+    <div class="edl-section">
+        <div class="inner container-fluid" style="max-width:1170px;">
+            <div class="row">
+            <ul>
+            	<li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="/our-customers/">Our Customers</a>
+            		<ul class="edl-nav-sub">
+            			<li><a href="/our-customers/airlines-airports">Airlines &amp; Airports</a></li>
+            			<li><a href="/our-customers/car-rental-companies">Car Rental Companies</a></li>
+            			<li><a href="/our-customers/corporations">Corporations</a></li>
+            			<li><a href="/our-customers/cruise-lines">Cruise Lines</a></li>
+            			<li><a href="/our-customers/developers">Developers</a></li>
+            			<li><a href="/our-customers/government">Government</a></li>
+            			<li><a href="/our-customers/hotels">Hotels</a></li>
+            			<li><a href="/our-customers/meta-search-engines">Meta Search Engines</a></li>
+            			<li><a href="/our-customers/online-travel-agencies">Online Travel Agencies</a></li>
+            			<li><a href="/our-customers/rail-carriers">Rail Carriers</a></li>
+            			<li><a href="/our-customers/tour-companies">Tour Companies</a></li>
+            			<li><a href="/our-customers/travel-agencies">Travel Agencies</a></li>
+            			<li><a href="/our-customers/travel-consolidators">Travel Consolidators</a></li>
+            			<li><a href="/our-customers/travel-management-companies">Travel Management Companies</a></li>
+            		</ul>
+            	</li>
+            	<li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="/our-technologies/">Our Technologies</a>
+            		<ul class="edl-nav-sub">
+            			<li><a href="/our-technologies/data-solutions">Data Solutions</a></li>
+            			<li><a href="/our-technologies/mobile">Mobile</a></li>
+            			<li><a href="/our-technologies/online-commerce">Online Commerce</a></li>
+            			<li><a href="/our-technologies/platform-services">Platform Services</a></li>
+            			<li><a href="/our-technologies/software">Software</a></li>
+            		</ul>
+            	</li>
+            	<li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="/our-businesses/">Our Businesses</a>
+            		<ul class="edl-nav-sub">
+            			<li><a href="/our-businesses/sabre-airline-solutions">Airline Solutions</a></li>
+            			<li><a href="/our-businesses/sabre-hospitality-solutions">Hospitality Solutions</a></li>
+            			<li><a href="/our-businesses/sabre-travel-network">Travel Network</a></li>
+            		</ul>
+            	</li>
+                <li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="/insights/">Insights</a>
+                    <ul class="edl-nav-sub">
+                        <li><a href="/insights/newsroom/">Newsroom</a></li>
+                        <li><a href="/insights/blog/">Blog</a></li>
+                        <li><a href="/insights/events/">Events</a></li>
+                        <li><a href="/insights/innovation-hub/">Innovation Hub</a></li>
+                        <li><a href="/insights/labs/">Labs</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+
+            <div class="row">
+            <ul>
+                <li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="/about/">About</a>
+                	<ul class="edl-nav-sub">
+                		<li><a href="/about/executive-leadership">Executive Leadership</a></li>
+                		<li><a href="/about/corporate-responsibility">Corporate Responsibility</a></li>
+                		<li><a href="/about/locations">Locations</a></li>
+                		<li><a href="/about/contact-us">Contact Us</a></li>
+                		<li><a href="/about/privacy-policy">Privacy Policy</a></li>
+                		<li><a href="/about/copyright-and-trademark-notice">Copyright &amp; Trademark</a></li>
+                	</ul>
+                </li>
+                <li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="/careers/">Careers</a>
+                	<ul class="edl-nav-sub">
+                		<li><a href="/careers/people-culture">People &amp; Culture</a></li>
+                		<li><a href="/careers/university-recruiting">University Recruiting</a></li>
+                		<li><a href="/careers/total-rewards">Total Rewards</a></li>
+                		<li><a href="/careers/growth-learning">Growth &amp; Learning</a></li>
+                	</ul>
+                </li>
+                <li class="col-md-3 col-sm-6">
+                    <a class="edl-nav--toplevel" href="http://investors.sabre.com">Investor Center</a>
+                	<ul class="edl-nav-sub">
+                		<li><a href="http://investors.sabre.com/releases.cfm">Financial Releases</a></li>
+                		<li><a href="http://investors.sabre.com/events.cfm">Events &amp; Presentations</a></li>
+                		<li><a href="http://investors.sabre.com/corporate-governance.cfm">Corporate Governance</a></li>
+                		<li><a href="http://investors.sabre.com/financials.cfm">Financials &amp; Filings</a></li>
+                		<li><a href="http://investors.sabre.com/stockquote.cfm">Stock Information</a></li>
+                		<li><a href="http://investors.sabre.com/contactus.cfm">Contact Inverstor Relations</a></li>
+                		<li><a href="http://investors.sabre.com/printed-materials.cfm">Shareholder Tools</a></li>
+                	</ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="js/edl.jquery.min.js"></script>
+<script src="js/edl.functions.js"></script>
+<script src="js/site.functions.js"></script>
+</body>
+</html>
