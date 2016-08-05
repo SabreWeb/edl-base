@@ -40,7 +40,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-html {
+*, html {
   box-sizing:border-box;
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
@@ -72,37 +72,43 @@ FONTS
 	font-style: normal;
 	font-weight: 400;
 	src: url("fonts/roboto/Roboto_400.eot?#iefix");
-	src: local("Roboto"), local("Roboto-Regular"), url("fonts/roboto/Roboto_400.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto/Roboto_400.woff") format("woff"), url("./fonts/roboto/Roboto_400.woff2") format("woff2"), url("./fonts/roboto/Roboto_400.svg#Roboto") format("svg"), url("./fonts/roboto/Roboto_400.ttf") format("truetype"); }
+	src: local("Roboto"), local("Roboto-Regular"), url("fonts/roboto/Roboto_400.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto_400.woff") format("woff"), url("fonts/roboto/Roboto_400.woff2") format("woff2"), url("fonts/roboto/Roboto_400.svg#Roboto") format("svg"), url("fonts/roboto/Roboto_400.ttf") format("truetype");
+}
 @font-face {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 300;
 	src: url("fonts/roboto/Roboto_300.eot?#iefix");
-	src: local("Roboto Light"), local("Roboto-Light"), url("fonts/roboto/Roboto_300.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto/Roboto_300.woff") format("woff"), url("./fonts/roboto/Roboto_300.woff2") format("woff2"), url("./fonts/roboto/Roboto_300.svg#Roboto") format("svg"), url("./fonts/roboto/Roboto_300.ttf") format("truetype"); }
+	src: local("Roboto Light"), local("Roboto-Light"), url("fonts/roboto/Roboto_300.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto_300.woff") format("woff"), url("fonts/roboto/Roboto_300.woff2") format("woff2"), url("fonts/roboto/Roboto_300.svg#Roboto") format("svg"), url("fonts/roboto/Roboto_300.ttf") format("truetype");
+}
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 700;
 	src: url('fonts/roboto/Roboto_700.eot?#iefix');
-	src: local('Roboto Bold'), local('Roboto-Bold'), url('fonts/roboto/Roboto_700.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto/Roboto_700.woff') format('woff'), url('./fonts/roboto/Roboto_700.woff2') format('woff2'), url('./fonts/roboto/Roboto_700.svg#Roboto') format('svg'), url('./fonts/roboto/Roboto_700.ttf') format('truetype');}
+	src: local('Roboto Bold'), local('Roboto-Bold'), url('fonts/roboto/Roboto_700.eot?#iefix') format('embedded-opentype'), url('fonts/roboto/Roboto_700.woff') format('woff'), url('fonts/roboto/Roboto_700.woff2') format('woff2'), url('fonts/roboto/Roboto_700.svg#Roboto') format('svg'), url('fonts/roboto/Roboto_700.ttf') format('truetype');
+}
 @font-face {
 	font-family: 'Roboto Slab';
 	font-style: normal;
 	font-weight: 300;
 	src: url("fonts/roboto-slab/Roboto_Slab_300.eot?#iefix");
-	src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url("fonts/roboto-slab/Roboto_Slab_300.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-slab/Roboto_Slab_300.woff") format("woff"), url("./fonts/roboto-slab/Roboto_Slab_300.woff2") format("woff2"), url("./fonts/roboto-slab/Roboto_Slab_300.svg#RobotoSlab") format("svg"), url("./fonts/roboto-slab/Roboto_Slab_300.ttf") format("truetype"); }
+	src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url("fonts/roboto-slab/Roboto_Slab_300.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-slab/Roboto_Slab_300.woff") format("woff"), url("fonts/roboto-slab/Roboto_Slab_300.woff2") format("woff2"), url("fonts/roboto-slab/Roboto_Slab_300.svg#RobotoSlab") format("svg"), url("fonts/roboto-slab/Roboto_Slab_300.ttf") format("truetype");
+}
 @font-face {
 	font-family: 'spark-icon-fill';
 	src: url("fonts/spark/spark-icon-fill.eot?#iefix");
 	src: url("fonts/spark/spark-icon-fill.eot?#iefix") format("embedded-opentype"), url("fonts/spark/spark-icon-fill.woff") format("woff"), url("fonts/spark/spark-icon-fill.ttf") format("truetype"), url("fonts/spark/spark-icon-fill.svg#spark-icon-fill") format("svg");
 	font-weight: normal;
-	font-style: normal; }
+	font-style: normal; 
+}
 @font-face {
 	font-family: 'spark-icon-line';
 	src: url("fonts/spark/spark-icon-line.eot#iefix");
 	src: url("fonts/spark/spark-icon-line.eot?#iefix") format("embedded-opentype"), url("fonts/spark/spark-icon-line.woff") format("woff"), url("fonts/spark/spark-icon-line.ttf") format("truetype"), url("fonts/spark/spark-icon-line.svg#spark-icon-line") format("svg");
 	font-weight: normal;
-	font-style: normal; }
+	font-style: normal;
+}
 
 /**************************************************************
 GLOBAL
@@ -341,7 +347,6 @@ ul{
 		font-size: 15px;
 	}
 }
-
 /**************************************************************
 BUTTONS / LINKS
 **************************************************************/
@@ -429,7 +434,7 @@ a.button-sml{
 	min-height: 20px;
 }
 /**************************************************************
-INPUTS  (requires jquery.validate.js for validation errors)
+INPUTS
 **************************************************************/
 input[type="text"],
 input[type="email"],
@@ -497,7 +502,6 @@ select{
 	margin-top: -12px;
 	pointer-events: none;
 }
-
 /**************************************************************
 EMBEDS
 **************************************************************/
@@ -521,7 +525,6 @@ iframe{
 	max-width: 100%;
 	width: 100%;
 }
-
 /**************************************************************
 ICONS EDL
 **************************************************************/
@@ -983,7 +986,6 @@ ICONS EDL
 .edl-icon--world::before {
 	content: "\f16e";
 }
-
 /**************************************************************
 BOOTSTRAP GRID
 **************************************************************/
@@ -1696,3 +1698,931 @@ BOOTSTRAP GRID
 .affix {
   position: fixed;
 }
+
+
+/*************************************************************************************
+EDL ELEMENTS
+
+GLOBAL
+*************************************************************************************/
+.edl-content{
+    position: relative;
+    padding-top: 120px;
+    overflow: hidden;
+}
+.edl-section{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+/*************************************************************************************
+HEADERS
+*************************************************************************************/
+.edl-header{
+    position: fixed;
+    top: 0px;
+    left:0;
+    width: 100%;
+    z-index: 99;
+    transition: top 300ms ease;
+    -webkit-transition: top 300ms ease;
+    -moz-transition: top 300ms ease;
+    -o-transition: top 300ms ease;
+}
+.edl-header--main{
+    height: 80px;
+    background: #222;
+    position: relative;
+}
+.edl-header--main:before{
+    content:"";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #ac0000;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.edl-header .edl-logo img{
+	height: 80px;
+	width: auto;
+	float: left;
+	margin-right: 10px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+span.edl-tagline{
+	color: #fff;
+	font-family: 'Roboto Slab';
+	font-size: 21px;
+	line-height: 82px;
+    font-weight: bold;
+}
+
+/*Header on scroll*/
+.edl-header.hide-utility{
+    top:-34px;
+}
+.edl-header.nav-up{
+    top:-120px;
+}
+
+/* Header Responsivness */
+@media screen and (max-width: 960px){
+    .edl-header--main{
+        height:60px;
+    }
+    .edl-logo{
+        padding:0;
+    }
+    .edl-logo img{
+        height: 60px !important;
+    }
+    .edl-header .edl-header--tagline{
+        line-height: 62px;
+        font-size:20px;
+    }
+    span.edl-tagline{
+    	line-height: 60px;
+        font-size: 16px;
+    }
+}
+/*************************************************************************************
+NAVIGATION
+*************************************************************************************/
+/* Main Navigation */
+.edl-nav--main,
+.edl-nav--main ul{
+    text-align: center;
+    float: left;
+    margin: 0;
+    list-style: none;
+}
+.edl-nav--main ul li{
+    display: inline-block;
+    float: left;
+    position: relative;
+    z-index: 1;
+    border-top: 3px solid transparent;
+}
+.edl-nav--main:hover ul li{
+    opacity: .5;
+}
+.edl-nav--main ul li a{
+    line-height: 81px;
+    max-height: 77px;
+    padding: 0 15px;
+    display: block;
+    color: #f4f4f4;
+    border:0;
+}
+.edl-nav--main ul li:hover{
+    color:#fff;
+    opacity: 1 !important;
+    background: #111;
+    border-color: #e50000;
+}
+
+/* Dropdown/Sub Navigation */
+.edl-nav--main ul li ul.edl-nav--sub{
+    position: absolute;
+    white-space: nowrap;
+    left:0;
+    top: 100%;
+    min-width: 220px;
+    background:#111111;
+    text-align: left;
+    z-index: 1;
+    margin: 0;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    border-bottom:2px solid #e50000;
+    padding:15px 15px;
+}
+.edl-nav--main ul.edl-nav--sub li{
+    opacity: 1;
+    display: block;
+    float: none;
+    border:0;
+}
+.edl-nav--main ul.edl-nav--sub li a{
+    line-height: 1.4em;
+    font-size: 14px;
+    padding-top:6px;
+    padding-bottom:8px;
+    display: block;
+    /*border-bottom:1px solid #000;*/
+    color: #ccc;
+    text-transform: capitalize;
+}
+.edl-nav--main ul.edl-nav--sub li a:hover{
+    /*background:#222;*/
+    color: #3399CC;
+}
+.edl-nav--main ul li:hover ul.edl-nav--sub{
+    display: block;
+}
+
+/* Utility Nav */
+.edl-nav--utility{
+    background: #fff;
+    width: 100%;
+    padding:0px 10px;
+    font-size: 13px;
+    height: 34px;
+}
+.edl-nav--utility ul{
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+}
+.edl-nav--utility ul li{
+    display: inline-block;
+    float: left;
+    padding:5px 10px;
+    position: relative;
+}
+.edl-nav--utility ul li a{
+    color: #999;
+    text-decoration: none;
+    border: 0;
+}
+.edl-nav--utility ul li a:hover{
+    color: #222;
+}
+
+/* Panel Nav */
+ul.edl-nav--panel{
+    text-align: left;
+    margin-left: 0;
+}
+ul.edl-nav--panel ul{
+    margin-left: 0;
+}
+ul.edl-nav--panel li{
+    opacity: 1;
+    display: block;
+    margin-bottom: 2px;
+}
+ul.edl-nav--panel li a{
+    display: block;
+    background: #e4e4e4;
+    border-left:2px solid #ccc;
+    color: #444;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ul.edl-nav--panel li a:hover{
+    background:#eeeeee;
+    color: #3399cc;
+    border-left:2px solid #3399cc;
+}
+ul.edl-nav--panel ul.edl-nav--sub,
+ul.edl-nav--panel ul.edl-nav--tert,
+ul.edl-nav--panel ul.sub-menu{
+    margin-top: 2px;
+}
+ul.edl-nav--panel ul.edl-nav--sub li a,
+ul.edl-nav--panel ul.sub-menu li a{
+    background:#eee;
+}
+ul.edl-nav--panel ul.edl-nav--tert li a{
+    padding-left:25px;
+}
+
+.edl-nav--panel-light{
+    border:1px solid #e4e4e4;
+}
+.edl-nav--panel-light a{
+    border-bottom: 1px solid #e4e4e4;
+    padding: 5px 15px;
+    color: #999;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+.edl-nav--panel-light a:hover{
+    background:#f4f4f4;
+}
+
+/* Breadcrumbs */
+.edl-breadcrumbs,
+.edl-breadcrumbs a{
+    color: #999;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.edl-breadcrumbs a:hover{
+    color:#3399CC;
+}
+
+/* Mega nav */
+.edl-hamburger{
+    position: absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 80px;
+    background: #111;
+}
+.edl-hamburger a{
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+}
+.edl-hamburger .edl-icon{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.edl-hamburger .edl-icon:before{
+    font-size:40px;
+    text-align: center;
+    color: #f4f4f4;
+    line-height: 84px;
+}
+
+.edl-nav--mega{
+    position: fixed;
+    top:0;
+    right:100%;
+    width:100%;
+    height:101%;
+    background:#222;
+    color:#fff;
+    z-index: 999;
+    overflow: hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling:touch;
+    transition: right 240ms ease-in-out;
+	-moz-transition: right 240ms ease-in-out;
+	-webkit-transition: right 240ms ease-in-out;
+	-o-transition: right 240ms ease-in-out;
+}
+.edl-nav--mega.show-mega{
+    right:0;
+}
+.edl-nav--mega .edl-header{
+    position: relative;
+    background:#111;
+    border-color: #111;
+    margin-bottom:60px;
+    text-align: center;
+}
+.edl-nav--mega .edl-hamburger .edl-icon:before{
+    font-size: 24px;
+}
+.edl-nav--mega .edl-logo img{
+    margin: 0 auto;
+}
+.edl-nav--mega .site-map{
+    padding-left:15px;
+    padding-right:15px;
+}
+.edl-nav--mega .site-map ul{
+    margin-bottom: 15px;
+}
+.edl-nav--mega .site-map ul li a.edl-nav--toplevel{
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ac0000;
+    margin-bottom:10px;
+    font-weight: bold;
+    color: #fff;
+}
+.edl-nav--mega .site-map ul li a{
+    color: #ccc;
+    padding: 5px 0;
+    display: block;
+    text-transform: none;
+    border-bottom: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+}
+.edl-nav--mega .site-map ul li a:hover{
+    color:#3399cc;
+}
+.edl-nav--mega ul{
+    margin: 0;
+    list-style: none;
+}
+.edl-nav--mega .edl-header--main::before{
+    display: none;
+}
+.edl-nav--utility-spacer{
+    height: 34px;
+    background: #222;
+}
+
+/* Simple Mega Nav */
+ul.edl-nav--simple{
+    text-align: center;
+    font-size: 18px;
+    padding: 30px 0;
+}
+ul.edl-nav--simple a{
+    padding: 10px 0;
+    display: block;
+    color: #fff;
+    font-size: 21px;
+}
+
+/* Nav Responsiveness */
+@media screen and (max-width: 960px){
+    .edl-nav--main{
+        display: none;
+    }
+    .edl-nav--utility,
+    .edl-nav--utility-spacer{
+        display: none;
+    }
+    .edl-hamburger{
+        width:60px;
+    }
+    .edl-hamburger .edl-icon:before{
+        font-size:40px;
+        text-align: center;
+        color: #f4f4f4;
+        line-height: 64px;
+    }
+}
+/*************************************************************************************
+SEARCH
+*************************************************************************************/
+.edl-search{
+    position: relative;
+    overflow: hidden;
+}
+.edl-search .button{
+    background-image:url('../images/icon_search.png') center center no-repeat;
+    display: inline-block;
+    min-height: 50px;
+    float: right;
+    width: 15%;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.edl-search .button img{
+    margin: 0 auto;
+}
+.edl-search .edl-input{
+    box-shadow: none !important;
+    padding: 15px;
+    width: 83%;
+    display: inline-block;
+    float: left;
+}
+/*************************************************************************************
+EXPAND/COLLAPSE & ACCORDION & TABS
+*************************************************************************************/
+/* Expand & Collapse */
+.edl-expand{
+    margin-bottom:30px;
+}
+.edl-expand .edl-expand--content{
+    display: none;
+}
+.edl-expand .edl-expand--content p{
+    margin-top: 0;
+}
+
+/* Accordion */
+.edl-accordion--item{
+    margin-top:-1px;
+}
+.edl-accordion--action p,
+.edl-accordion--action h1,
+.edl-accordion--action h2,
+.edl-accordion--action h3,
+.edl-accordion--action h4,
+.edl-accordion--action h5,
+.edl-accordion--action h6{
+    margin: 0;
+    padding: 0;
+}
+.edl-accordion .edl-accordion--action{
+    padding:15px 40px 15px 20px;
+    border:1px solid #e4e4e4;
+    position: relative;
+    cursor:pointer;
+}
+.edl-accordion .edl-accordion--action:hover{
+    border-color:#A1A1A1;
+    z-index: 1;
+    transition: border 200ms ease-in-out;
+}
+.edl-accordion .edl-accordion--content{
+    display: none;
+    border:1px solid #e4e4e4;
+    box-shadow: inset 0px 10px 10px -10px #ccc;
+    padding:0 20px 20px 20px;
+}
+.edl-accordion .edl-accordion--action:after{
+    content: '\f10f';
+    font-family: "spark-icon-fill" !important;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+}
+.edl-accordion .edl-accordion--action.active:after{
+    content: '\f112';
+}
+
+/* Tabs */
+.edl-tab ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.edl-tab ul.edl-tab--nav  li{
+    display: inline;
+    float: left;
+    margin-right:-1px;
+    margin-bottom:-1px;
+}
+.edl-tab ul.edl-tab--nav li{
+    border:1px solid #e4e4e4;
+    display: block;
+    background:#f4f4f4;
+    border-radius: 6px 6px 0 0;
+
+}
+.edl-tab ul.edl-tab--nav li.active{
+    background: #fff;
+    border-bottom:1px solid #fff;
+    border-right:3px solid #e4e4e4;
+}
+.edl-tab ul.edl-tab--nav a{
+    display: block;
+    padding:10px 25px;
+    color: #333;
+    border: none;
+}
+.edl-tab ul.edl-tab--panels li {
+    display: none;
+}
+.edl-tab ul.edl-tab--panels li.active {
+    display: block;
+}
+/*************************************************************************************
+CARDS & PANELS
+*************************************************************************************/
+.edl-card{
+    background:#f4f4f4;
+    border:1px solid #f4f4f4;
+    border-bottom:3px solid #e4e4e4;
+    border-radius: 4px;
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+.edl-card--thumbnail{
+    background: #ccc;
+}
+.edl-card img{
+    border-radius: 0;
+}
+.edl-card a h6{
+    font-weight: 300;
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 1.3em;
+    color:#333;
+}
+.edl-card a h6:hover{
+    color: #111;
+}
+.edl-card:hover{
+    border-color:#e4e4e4;
+    border-bottom-color: #ccc;
+    background:#fff;
+}
+.edl-card .edl-card--content{
+    padding:20px;
+}
+.edl-card .edl-card--content p{
+    margin: 0;
+    font-size: 14px;
+    color:#999;
+}
+.edl-card p.edl-card--content-type{
+    margin-bottom: 10px;
+}
+.edl-card p.edl-card--content-type a{
+    color: #999;
+}
+.edl-card p.edl-card--content-type a:hover{
+    color: #3399CC;
+}
+.edl-card p.edl-card--content-type span{
+    float: right;
+}
+.edl-card .edl-card--meta{
+    position: absolute;
+    background:#f4f4f4;
+    width: 100%;
+    bottom:0;
+    left:0;
+    padding: 44px 20px 10px 20px;
+    pointer-events: none;
+    line-height: 1em;
+    background: -webkit-linear-gradient(bottom, rgba(244,244,244,1) 50%, rgba(244,244,244,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(244,244,244,1) 50%, rgba(244,244,244,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(244,244,244,1) 50%, rgba(244,244,244,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, rgba(244,244,244,1) 50%, rgba(244,244,244,0));
+}
+.edl-card .edl-card--meta a,
+.edl-card .edl-card--meta span,
+.edl-card p.edl-card--content-type{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border:0;
+    color: #999;
+    pointer-events: all;
+}
+.edl-card .edl-card--meta span{
+    margin-top: 2px;
+}
+.edl-card .edl-card--meta a{
+    color: #3399CC;
+}
+.edl-card .edl-card--meta a:hover{
+    color: #79CAF2;
+}
+/* Card - Compact */
+.edl-card-min{
+    height: auto;
+    border-radius: 4px;
+    margin-bottom:15px;
+}
+.edl-card-min h6{
+    margin-bottom:0;
+}
+.edl-card-min .edl-card--content{
+    padding-bottom:0;
+}
+.edl-card-min .edl-card--meta{
+    position: static;
+    background: none;
+    padding:8px 20px;
+    color: #999;
+}
+.edl-card-min .edl-card--meta a:after{
+    content:'\2022';
+    display: inline-block;
+    margin: 0 3px 0 5px;
+    color: #999;
+}
+.edl-card-min .edl-card--meta span{
+    float: none;
+    font-size: 11px;
+    font-weight: bold;
+}
+.edl-card--icon{
+    position: absolute;
+    padding: 22px 20px;
+}
+.edl-card--icon-content{
+    padding-left:80px !important;
+}
+/* Card - Light */
+.edl-card-light{
+    background: #fff;
+    border-bottom:3px solid #e4e4e4;
+}
+.edl-card-light .edl-card--meta{
+    background: #fff;
+    background: -webkit-linear-gradient(bottom, rgba(255,255,255,1) 50%, rgba(255,255,255,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(255,255,255,1) 50%, rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(255,255,255,1) 50%, rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, rgba(255,255,255,1) 50%, rgba(255,255,255,0));
+}
+/* Panel */
+.edl-panel{
+    padding: 20px;
+    border:1px solid #e4e4e4;
+    border-radius: 3px;
+    margin-bottom:30px;
+    overflow: hidden;
+}
+.edl-panel img{
+    border-radius: 4px;
+}
+/* Panel Meta */
+.edl-panel--meta{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #999;
+    position: relative;
+    top:4px;
+}
+.edl-panel--meta a:after{
+    content:'\2022';
+    display: inline-block;
+    margin: 0 3px 0 5px;
+    color: #999;
+}
+.edl-panel--meta a{
+    color: #999;
+}
+.edl-panel--meta a:hover{
+    color:#79CAF2;
+}
+/* Panel Lists */
+.edl-panel-list{
+    margin: 0;
+    border-bottom:1px dotted #ccc;
+    padding:20px 0 14px 0;
+    border-radius: 0;
+    position: relative;
+}
+.edl-panel-list .edl-panel--content p{
+    margin: 0;
+}
+
+.edl-panel.panel-list{
+    margin-bottom: 10px;
+}
+
+/* Card & Panel Responsivness */
+@media screen and (max-width:640px){
+    .edl-card{
+        height: auto;
+    }
+    .edl-card .edl-card--meta{
+        position: static;
+        padding:10px 20px 10px 20px;
+    }
+    .edl-card .edl-card--content{
+        padding-bottom:0px;
+    }
+}
+/*************************************************************************************
+FILES, DOCUMENTS & WEB LINKS
+*************************************************************************************/
+.edl-file{
+
+}
+
+.edl-link{
+
+}
+/*************************************************************************************
+MESSAGES & NOTIFICATIONS
+*************************************************************************************/
+.edl-message{
+    padding: 20px 30px;
+    border:1px solid #e4e4e4;
+    border-radius: 3px;
+    margin-bottom:30px;
+    background: #fff;
+    overflow: hidden;
+}
+.edl-message p{
+    margin: 0;
+    float: left;
+    margin-left: 20px;
+}
+.edl-message span{
+    font-size: 28px;
+    font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
+    display: block;
+    margin-bottom: 5px;
+}
+.edl-message .edl-message--icon:before{
+    font-size: 26px;
+    float: left;
+}
+
+.edl-message.edl-message--success p span,
+.edl-message.edl-message--success .edl-message--icon{
+    color: #75a01f;
+}
+.edl-message.edl-message--warning p span,
+.edl-message.edl-message--warning .edl-message--icon{
+    color: #cd8511;
+}
+.edl-message.edl-message--error p span,
+.edl-message.edl-message--error .edl-message--icon{
+    color: #ac0000;
+}
+
+/* Notices */
+.edl-notice{
+    padding: 15px 40px;
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+    background: #ac0000;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+.edl-notice p{
+    margin: 0;
+    color: #fff;
+}
+.edl-notice a{
+    color:#fff;
+    text-decoration: underline;
+}
+.edl-notice .edl-icon{
+    position: absolute;
+    right: 15px;
+    top:15px;
+    cursor: pointer;
+}
+.edl-notice .edl-icon:before{
+    color: #fff;
+}
+/*************************************************************************************
+FORM ELEMENTS
+*************************************************************************************/
+/* Dyamic In-Field Labels */
+form.edl-form input[type='text'],
+form.edl-form input[type='email'],
+form.edl-form input[type='tel'],
+form.edl-form select,
+form.edl-form textarea{
+    padding:1rem 1rem  .25rem 1rem !important;
+    width: 100%;
+    font-size: 1rem;
+    min-height: 50px;
+    border:1px solid #e4e4e4;
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none !important;
+}
+form.edl-form textarea{
+    min-height: 150px;
+    padding-top: 1.4rem !important;
+}
+form.edl-form input:focus,
+form.edl-form select:focus,
+form.edl-form textarea:focus{
+    border-color:#23826F;
+    outline: none;
+}
+form.edl-form label.edl-label{
+    position: absolute;
+    left: 1rem;
+    line-height: 3.125rem;
+    z-index: 1;
+    top: 0;
+    transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    pointer-events: none;
+    color: #999;
+    font-size: 1rem;
+}
+form.edl-form label.has-value{
+    color: #999;
+    font-size: .7rem;
+    line-height: 1.9rem;
+}
+/* Form select */
+form.edl-form .edl-select select {
+    cursor:pointer;
+    padding: 1rem;
+}
+form.edl-form .edl-select:hover select{
+    border-color:#23826F;
+}
+/*************************************************************************************
+SOCIAL
+*************************************************************************************/
+.edl-social ul li{
+    display: inline-block;
+    line-height: 65px;
+
+}
+.edl-social ul li a{
+    color:#555;
+    padding: 0 10px;
+    display: block;
+}
+.edl-social .edl-icon:before{
+    font-size: 21px;
+}
+
+/* Hovers */
+.edl-social ul li a:hover .edl-icon:before{
+    color:#f4f4f4;
+}
+/*************************************************************************************
+FOOTER
+*************************************************************************************/
+.edl-footer{
+	background:#222222;
+	padding:0 15px;
+}
+.edl-footer .edl-nav--footer,
+.edl-footer .edl-footer-logo{
+	float: left;
+}
+.edl-footer ul{
+    margin: 0;
+}
+.edl-footer .edl-nav--footer ul li{
+	display: inline;
+	line-height: 65px;
+	padding:0 15px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+.edl-footer .edl-nav--footer ul li a{
+	color: #f4f4f4;
+	text-decoration: none;
+    border:none;
+}
+.edl-footer .edl-nav--footer ul li a:hover{
+	color:#999;
+}
+
+/* Footer Responsivness */
+@media screen and (max-width:740px){
+    .edl-footer{
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom:30px;
+        padding-left:0;
+        padding-right:0;
+    }
+    .edl-footer .edl-nav--footer ul li{
+        display: block;
+        line-height: 2em;
+    }
+    .edl-footer .edl-nav--footer,
+    .edl-footer .edl-footer-logo{
+    	float: none;
+    }
+    .edl-footer .edl-footer-logo img{
+        display: inline;
+    }
+
+}
+

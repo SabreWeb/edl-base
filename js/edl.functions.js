@@ -1,7 +1,7 @@
 // EDL JS FUNCTIONS
-jQuery( document ).ready(function($) {
+$( document ).ready(function() {
 // Hide Header on on scroll down
-jQuery.fn.edl_headerScroll = function(){
+$.fn.edl_headerScroll = function(){
     // Variables
     var $this = $(this);
     var didScroll;
@@ -38,7 +38,7 @@ jQuery.fn.edl_headerScroll = function(){
 };
 
 // ANIMATE UTILITY NAV
-jQuery.fn.edl_utility = function(){
+$.fn.edl_utility = function(){
     $(document).scroll(function() {
         if ($(document).scrollTop() > 300) {
     		$('.edl-header').addClass('hide-utility');
@@ -50,7 +50,7 @@ jQuery.fn.edl_utility = function(){
     });
 };
 // Mega Navigation
-jQuery.fn.edl_meganav = function(){
+$.fn.edl_meganav = function(){
     $(this).click(function() {
         $('.edl-nav--mega').toggleClass('show-mega');
         $('body').toggleClass('noscroll');
@@ -62,7 +62,7 @@ jQuery.fn.edl_meganav = function(){
     });
 };
 // Accordion
-jQuery.fn.edl_accordion = function(){
+$.fn.edl_accordion = function(){
     // Set your action element
     var action = $('.edl-accordion--action');
     // Set you hidden content element
@@ -81,7 +81,7 @@ jQuery.fn.edl_accordion = function(){
     });
 };
 // Expand & Collapes
-jQuery.fn.edl_expand = function(){
+$.fn.edl_expand = function(){
     $(this).click(function(){
         var moredetails = $(this).parent().children('.edl-expand--content');
         var viewmore = $(this);
@@ -92,7 +92,7 @@ jQuery.fn.edl_expand = function(){
     });
 };
 // Tabs
-jQuery.fn.edl_tabs = function (){
+$.fn.edl_tabs = function (){
     var $this = $(this);
     $(".edl-tab--nav li").click(function(e){
         if (!$(this).hasClass("active")) {
@@ -107,7 +107,7 @@ jQuery.fn.edl_tabs = function (){
     });
 };
 // Form text inputs
-jQuery.fn.edl_form_input = function (){
+$.fn.edl_form_input = function (){
 
     // Find inputs
     var inputs = $(this).find('input, textarea, select');
@@ -144,7 +144,7 @@ jQuery.fn.edl_form_input = function (){
     });
 };
 // Notices
-jQuery.fn.edl_notice = function (){
+$.fn.edl_notice = function (){
     $(this).click(function(){
         $('.edl-notice').hide();
         return false;
