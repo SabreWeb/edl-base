@@ -100,7 +100,7 @@ FONTS
 	src: url("fonts/spark/spark-icon-fill.eot?#iefix");
 	src: url("fonts/spark/spark-icon-fill.eot?#iefix") format("embedded-opentype"), url("fonts/spark/spark-icon-fill.woff") format("woff"), url("fonts/spark/spark-icon-fill.ttf") format("truetype"), url("fonts/spark/spark-icon-fill.svg#spark-icon-fill") format("svg");
 	font-weight: normal;
-	font-style: normal; 
+	font-style: normal;
 }
 @font-face {
 	font-family: 'spark-icon-line';
@@ -499,7 +499,16 @@ select{
 	position: absolute;
 	right: 15px;
 	top: 50%;
-	margin-top: -12px;
+	pointer-events: none;
+}
+.edl-select:after{
+	content: '\f10f';
+	font-family: "spark-icon-fill" !important;
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	margin-top:-12px;
 	pointer-events: none;
 }
 /**************************************************************
@@ -1759,6 +1768,8 @@ span.edl-tagline{
 	font-size: 21px;
 	line-height: 82px;
     font-weight: bold;
+	float: left;
+	margin-right: 20px;
 }
 
 /*Header on scroll*/
@@ -2312,14 +2323,12 @@ CARDS & PANELS
 .edl-card-min h6{
     margin-bottom:0;
 }
-.edl-card-min .edl-card--content{
-    padding-bottom:0;
-}
 .edl-card-min .edl-card--meta{
     position: static;
     background: none;
     padding:8px 20px;
     color: #999;
+	margin-top: -20px;
 }
 .edl-card-min .edl-card--meta a:after{
     content:'\2022';
@@ -2358,6 +2367,7 @@ CARDS & PANELS
     border-radius: 4px;
     margin-bottom:30px;
     overflow: hidden;
+	background: #fff;
 }
 .edl-panel img{
     border-radius: 4px;
@@ -2625,4 +2635,3 @@ FOOTER
     }
 
 }
-
