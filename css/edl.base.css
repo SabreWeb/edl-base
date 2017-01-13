@@ -2423,14 +2423,35 @@ CARDS & PANELS
     }
 }
 /*************************************************************************************
-FILES, DOCUMENTS & WEB LINKS
+TABLES
 *************************************************************************************/
-.edl-file{
-
+.edl-table{
+	border: 1px solid #e4e4e4;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 20px;
+    width: 100%;
 }
-
-.edl-link{
-
+.edl-table td{
+	border-top: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+    padding: 6px 20px 6px 20px;
+    min-width: 100px;
+}
+.edl-table th{
+	background: #333;
+	color:#fff !important;
+	padding: 10px 20px;
+	text-align: left;
+}
+.edl-table th h1,
+.edl-table th h2,
+.edl-table th h3,
+.edl-table th h4,
+.edl-table th h5,
+.edl-table th h6{
+	margin: 0;
+	color: #fff;
 }
 /*************************************************************************************
 MESSAGES & NOTIFICATIONS
