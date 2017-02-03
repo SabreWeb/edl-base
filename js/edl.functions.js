@@ -91,6 +91,16 @@ $.fn.edl_expand = function(){
         return false;
     });
 };
+// Expand & Collapes list
+$.fn.edl_expand_list = function(){
+    $(this).click(function(){
+        var moredetails = $(this).parent().children('.edl-expand--list-content');
+        var viewmore = $(this);
+        $(this).parent().find(moredetails).slideToggle(150);
+        $(this).toggleClass('active');
+        return false;
+    });
+};
 // Tabs
 $.fn.edl_tabs = function (){
     var $this = $(this);
@@ -138,7 +148,7 @@ $.fn.edl_form_input = function (){
         });
         
         // Has value
-        if($(this).val() ) {
+        if($(this).val()) {
             $(this).parent().find(labels).addClass(active);
         } 
     });
