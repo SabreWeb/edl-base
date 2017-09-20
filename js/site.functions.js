@@ -6,8 +6,9 @@ $( document ).ready(function() {
         $('.edl-header').edl_utility();
     }
     $('.edl-hamburger a').edl_meganav();
-    $('.edl-accordion--item .edl-accordion--action').edl_accordion();
-    $('.edl-expand .edl-expand--action').edl_expand();
+    $('.edl-accordion').edl_accordion();
+    $('.edl-expand').edl_expand();
+    $('.edl-expand--list').edl_expand_list();
     $('.edl-tab').edl_tabs();
     $('.edl-form').edl_form_input();
 });

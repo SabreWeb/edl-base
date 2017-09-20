@@ -1,12 +1,34 @@
 // EDL JS FUNCTIONS
-$( document ).ready(function() {
+jQuery( document ).ready(function($) {
+// Fix header to top on scroll down
+$.fn.edl_headerTotop = function(){
+    window.addEventListener( 'scroll', function()
+{
+    //...
+    if( wScrollCurrent <= 0 ) // scrolled to the very top; element sticks to the top
+        element.style.top = '0px';
+
+    else if( wScrollDiff > 0 ) // scrolled up; element slides in
+        element.style.top = ( elTop > 0 ? 0 : elTop ) + 'px';
+
+    else if( wScrollDiff < 0 ) // scrolled down
+    {
+        if( wScrollCurrent + wHeight >= dHeight - elHeight )  // scrolled to the very bottom; element slides in
+            element.style.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
+
+        else // scrolled down; element slides out
+            element.style.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
+    }
+    //...
+});
+};
 // Hide Header on on scroll down
 $.fn.edl_headerScroll = function(){
     // Variables
     var $this = $(this);
     var didScroll;
     var lastScrollTop = 0;
-    var delta = 50;
+    var delta = 0;
     var navbarHeight = $this.outerHeight();
     $(window).scroll(function(event){
         didScroll = true;
@@ -54,6 +76,7 @@ $.fn.edl_meganav = function(){
     $(this).click(function() {
         $('.edl-nav--mega').toggleClass('show-mega');
         $('body').toggleClass('noscroll');
+        $(this).find('i').toggleClass('edl-icon--close');
         return false;
     });
     $('.edl-nav--mega a').click(function(){
@@ -70,30 +93,34 @@ $.fn.edl_accordion = function(){
     $(action).click(function(){
         if (!$(this).hasClass('active')){
             $(action).removeClass('active');
-            $(moredetails).slideUp(150).removeClass('active');
+            $(this).parent().parent().find(moredetails).slideUp(150).removeClass('active');
             $(this).parent().find(moredetails).slideDown(150).addClass('active');
             $(this).addClass('active');
         } else {
             $(action).removeClass('active');
-            $(moredetails).slideUp(150).removeClass('active');
+            $(this).parent().parent().find(moredetails).slideUp(150).removeClass('active');
         }
         return false;
     });
 };
 // Expand & Collapes
 $.fn.edl_expand = function(){
-    $(this).click(function(){
+    // Set your action element
+    var action = $('.edl-expand--action');
+    $(action).click(function(){
         var moredetails = $(this).parent().children('.edl-expand--content');
         var viewmore = $(this);
         var txt = moredetails.is(':visible') ? 'View more +' : 'View less -';
         $(this).parent().find(viewmore).text(txt);
-        $(this).parent().find(moredetails).slideToggle(150);
+        $(this).parent().parent().find(moredetails).slideToggle(150);
         return false;
     });
 };
 // Expand & Collapes list
 $.fn.edl_expand_list = function(){
-    $(this).click(function(){
+    // Set your action element
+    var action = $('.edl-expand--list-action');
+    $(action).click(function(){
         var moredetails = $(this).parent().children('.edl-expand--list-content');
         var viewmore = $(this);
         $(this).parent().find(moredetails).slideToggle(150);
@@ -146,11 +173,6 @@ $.fn.edl_form_input = function (){
                 $(this).parent().find(labels).removeClass(active);
             }
         });
-        
-        // Has value
-        if($(this).val()) {
-            $(this).parent().find(labels).addClass(active);
-        } 
     });
 };
 // Notices
