@@ -2529,6 +2529,7 @@ MESSAGES & NOTIFICATIONS
     margin: 0;
     float: left;
     margin-left: 20px;
+    width:85%;
 }
 .edl-message span{
     font-size: 28px;

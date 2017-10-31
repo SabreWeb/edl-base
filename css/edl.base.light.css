@@ -2656,6 +2656,7 @@ MESSAGES & NOTIFICATIONS
     margin: 0;
     float: left;
     margin-left: 20px;
+    width:85%;
 }
 .edl-message .edl-message--icon:before{
     font-size: 18px;
