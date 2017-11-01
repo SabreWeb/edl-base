@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0" />
 <meta charset="UTF-8">
@@ -136,15 +136,21 @@
 <form class="edl-form">
     <p>
         <label class="edl-label" for="name">Full name</label>
-        <input type="text" name="name" value="" />
+        <input type="text" name="name" value="" placeholder="Your full name..."/>
     </p>
     <p>
         <label class="edl-label" for="email">Email address</label>
-        <input type="email" name="email" />
+        <input type="email" name="email" placeholder="email@domain.com"/>
     </p>
     <p>
         <label class="edl-label" for="comments">Comments</label>
-        <textarea name="comments"></textarea>
+        <textarea name="comments" placeholder="Tell us what you think..."></textarea>
+    </p>
+    <p>
+        <label class="edl-checkbox"><input type="checkbox" name="checkbox" value="checkbox">Checkbox</label>
+    </p>
+    <p>
+        <label class="edl-radio"><input type="radio" name="radio" value="radio">Radio</label>
     </p>
     <p class="edl-select">
         <label class="edl-label" for="sample">What should you choose?</label>
@@ -161,7 +167,7 @@
 <form class="edl-form--default">
     <p>
         <label for="name">Full name</label>
-        <input type="text" name="name" value="" />
+        <input type="text" name="name" value="" placeholder="Jon Doe" />
     </p>
     <p>
         <label for="email">Email address</label>
@@ -169,6 +175,12 @@
     <p>
         <label for="comments">Comments</label>
         <textarea name="comments"></textarea>
+    </p>
+    <p>
+        <label class="checkbox"><input type="checkbox" name="checkbox" value="checkbox"> Checkbox</label>
+    </p>
+    <p>
+        <label class="radio"><input type="radio" name="radio" value="radio"> Radio</label>
     </p>
     <p class="custom-select">
         <label for="sample">What should you choose?</label>
@@ -599,7 +611,7 @@
 <br />
 <br />
 <h4>Layout / Grid</h4>
-<p>The Sabre web framework utilizes the default <a href="https://getbootstrap.com/docs/3.3/css/#grid" target="_blank">Bootstrap CSS grid</a>. Documentation can be found at Bootstrap.com. Bootstrap version 3.x.x is used, meaing the 'float' based grid. The only component from Bootstrap availabe in the Sabre web framework is the css grid.</p>
+<p>The Sabre web framework utilizes the default <a href="https://getbootstrap.com/docs/3.3/css/#grid" target="_blank">Bootstrap CSS grid</a>. Documentation can be found at Bootstrap.com. Bootstrap version 3.x.x is used, meaning the 'float' based grid. The only component from Bootstrap available in the Sabre web framework is the css grid.</p>
 
 </div>
 </div>

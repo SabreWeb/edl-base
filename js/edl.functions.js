@@ -157,6 +157,22 @@ $.fn.edl_form_input = function (){
             $(this).parent().find(labels).addClass(active);
         }
     });
+
+    // Radio & Checkbox
+    $(this).find("input[type=checkbox]").on('change', function () {
+        // Toggle current selected checkbox
+        $(this).parent().toggleClass("selected");
+        return false;
+    });
+    $(this).find("input[type=radio]").on('change', function () {
+        // Get all .input-radios from parent
+        var options = $(this).parent().parent().find('.edl-radio');
+        // Remove all 'selected' classes
+        $(options).removeClass('selected');
+        // Toggle current selected radio
+        $(this).parent().toggleClass("selected");
+        return false;
+    });
 };
 // Notices
 $.fn.edl_notice = function (){

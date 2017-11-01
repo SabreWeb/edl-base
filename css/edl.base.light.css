@@ -51,16 +51,32 @@ table {
   -moz-box-sizing:inherit;
 }
 ::-webkit-input-placeholder {
-   color: #555;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #555;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #555;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 :-ms-input-placeholder {
-   color: #555;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 ::-moz-selection { background: #ccc; }
 ::selection { background: #ccc; }
@@ -902,43 +918,33 @@ ICONS EDL
 .edl-icon--password-hide::before {
 	content: "\f14a";
 }
-
 .edl-icon--password-view::before {
 	content: "\f14b";
 }
-
 .edl-icon--pencil::before {
 	content: "\f14c";
 }
-
 .edl-icon--pet-paw::before {
 	content: "\f18a";
 }
-
 .edl-icon--phone-hang-up::before {
 	content: "\f18b";
 }
-
 .edl-icon--phone-mobile::before {
 	content: "\f14d";
 }
-
 .edl-icon--phone::before {
 	content: "\f14e";
 }
-
 .edl-icon--picture::before {
 	content: "\f14f";
 }
-
 .edl-icon--pictures::before {
 	content: "\f150";
 }
-
 .edl-icon--power-button::before {
 	content: "\f151";
 }
-
 .edl-icon--print::before {
 	content: "\f152";
 }
@@ -2605,7 +2611,7 @@ TABLES
     border-spacing: 0;
     margin: 0 0 20px;
     width: 100%;
-	min-width: 640px;
+	min-width: 600px;
 	position: relative;
 	overflow-y:scroll;
 }
@@ -2711,6 +2717,9 @@ FORM ELEMENTS
 form.edl-form input[type='text'],
 form.edl-form input[type='email'],
 form.edl-form input[type='tel'],
+form.edl-form input[type='password'],
+form.edl-form input[type='number'],
+form.edl-form input[type='date'],
 form.edl-form select,
 form.edl-form textarea{
     padding:1rem 1rem  .25rem 1rem !important;
@@ -2718,6 +2727,7 @@ form.edl-form textarea{
     font-size: 1rem;
     min-height: 50px;
     -webkit-appearance: none !important;
+	font-size: 16px;
 }
 form.edl-form textarea{
     min-height: 150px;
@@ -2739,7 +2749,7 @@ form.edl-form label.edl-label{
     font-size: 1rem;
 }
 form.edl-form label.has-value{
-    color: #999;
+    color: #3399cc;
     font-size: .7rem;
     line-height: 1.9rem;
 }
@@ -2748,6 +2758,54 @@ form.edl-form .edl-select select {
     cursor:pointer;
     padding: 1rem;
 }
+/* Radio & Checkbox */
+.edl-radio,
+.edl-checkbox {
+    display:inline-block;
+    cursor: pointer;
+    position: relative;
+	padding: 6px 15px;
+    font-size: 16px;
+}
+form.edl-form .edl-checkbox,
+form.edl-form .edl-radio{
+	padding-left:40px;
+}
+form.edl-form input[type=radio],
+form.edl-form input[type=checkbox] {
+	visibility: hidden;
+	position: absolute;
+}
+form.edl-form .edl-checkbox:before,
+form.edl-form .edl-radio:before {
+    content:"";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+	background: #fff;
+	border:1px solid #e4e4e4;
+	top:50%;
+	margin-top: -15px;
+	border-radius: 50%;
+}
+form.edl-form .edl-checkbox.selected:before,
+form.edl-form .edl-radio.selected:before{
+	background: #3399cc;
+	border-width: 8px;
+	border-color: #eee;
+}
+/* Placeholders */
+form.edl-form ::-webkit-input-placeholder { color: #fff; }
+form.edl-form :focus::-webkit-input-placeholder { color: #999; }
+form.edl-form ::-moz-input-placeholder { color: #fff; }
+form.edl-form :focus::-moz-input-placeholder { color: #999; }
+form.edl-form :-moz-input-placeholder { color: #fff; }
+form.edl-form :focus:-moz-input-placeholder { color: #999; }
+form.edl-form :-ms-input-placeholder { color: #fff !important; }
+
+
 /*************************************************************************************
 SOCIAL
 *************************************************************************************/
