@@ -51,16 +51,32 @@ table {
   -moz-box-sizing:inherit;
 }
 ::-webkit-input-placeholder {
-   color: #A1A1A1;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 :-moz-placeholder { /* Firefox 18- */
-   color: #A1A1A1;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #A1A1A1;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 :-ms-input-placeholder {
-   color: #A1A1A1;
+   color: #999;
+   transition: all 100ms ease-in-out;
+   -webkit-transition: all 100ms ease-in-out;
+   -moz-transition: all 100ms ease-in-out;
+   -ms-transition: all 100ms ease-in-out;
 }
 ::-moz-selection { background: #ccc; }
 ::selection { background: #ccc; }
@@ -205,7 +221,7 @@ TYPOGRAOPHY
 /* Headings */
 h1, h2, h3, h4{
 	font-weight: 300;
-	font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	line-height: 1.2em;
 	margin-bottom:1rem;
 	color:#333;
@@ -218,13 +234,13 @@ h5, h6{
 	color:#333;
 }
 h1{
-	font-size: 40px;
+	font-size: 44px;
 }
 h2{
-	font-size: 28px;
+	font-size: 32px;
 }
 h3{
-	font-size: 26px;
+	font-size: 28px;
 }
 h4{
 	font-size: 24px;
@@ -1010,7 +1026,7 @@ BOOTSTRAP GRID
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 1000px;
+  max-width: 1170px;
   width: 100%;
 }
 .row {
@@ -1708,7 +1724,6 @@ BOOTSTRAP GRID
   position: fixed;
 }
 
-
 /*************************************************************************************
 EDL ELEMENTS
 
@@ -1720,8 +1735,12 @@ GLOBAL
     overflow: hidden;
 }
 .edl-section{
-    padding-top:30px;
-    padding-bottom:30px;
+    padding-top:40px;
+    padding-bottom:40px;
+}
+.edl-section--lg{
+	padding-top:80px;
+    padding-bottom:80px;
 }
 /*************************************************************************************
 HEADERS
@@ -1737,39 +1756,50 @@ HEADERS
     -moz-transition: top 300ms ease;
     -o-transition: top 300ms ease;
 }
+.edl-header--main:after{
+	bottom: -5px;
+	/*box-shadow: inset 0px 6px 3px -2px rgba(51, 51, 51, .125);*/
+	box-shadow: inset 0px 2px 3px 0px rgba(51, 51, 51, .125);
+	content: "";
+	height: 6px;
+	left: 0px;
+	pointer-events: none;
+	position: absolute;
+	right: 0px;
+	width: 100%;
+}
+.edl-header.fix-to-top{
+	position: fixed;
+}
 .edl-header--main{
-    height: 80px;
+    height: 74px;
     background: #222;
     position: relative;
+    border-top: 4px solid #e50000;
 }
-.edl-header--main:before{
-    content:"";
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: #ac0000;
-    position: absolute;
-    top: 0;
-    z-index: 1;
+.edl-header--transparent{
+	background: none;
+	border: 0;
 }
 .edl-header .edl-logo img{
-	height: 80px;
+	height: 70px !important;
 	width: auto;
 	float: left;
 	margin-right: 10px;
     display: block;
     position: relative;
     z-index: 1;
+	margin-bottom: -1px;
 }
 
 span.edl-tagline{
-	color: #fff;
-	font-family: 'Roboto Slab';
+	font-family: 'Roboto';
+	font-weight: normal;
 	font-size: 21px;
-	line-height: 82px;
-    font-weight: bold;
+	line-height: 70px;
 	float: left;
 	margin-right: 20px;
+	color: #fff;
 }
 
 /*Header on scroll*/
@@ -1783,16 +1813,16 @@ span.edl-tagline{
 /* Header Responsivness */
 @media screen and (max-width: 960px){
     .edl-header--main{
-        height:60px;
+        height:64px;
     }
     .edl-logo{
         padding:0;
     }
-    .edl-logo img{
+    .edl-header .edl-logo img{
         height: 60px !important;
     }
     .edl-header .edl-header--tagline{
-        line-height: 62px;
+        line-height: 60px;
         font-size:20px;
     }
     span.edl-tagline{
@@ -1816,14 +1846,13 @@ NAVIGATION
     float: left;
     position: relative;
     z-index: 1;
-    border-top: 3px solid transparent;
 }
 .edl-nav--main:hover ul li{
     opacity: .5;
 }
 .edl-nav--main ul li a{
-    line-height: 81px;
-    max-height: 77px;
+    line-height: 72px;
+    max-height: 70px;
     padding: 0 15px;
     display: block;
     color: #f4f4f4;
@@ -1976,7 +2005,7 @@ ul.edl-nav--panel ul.edl-nav--tert li a{
     right:0;
     top:0;
     bottom:0;
-    width: 80px;
+    width: 70px;
     background: #111;
 }
 .edl-hamburger a{
@@ -1994,7 +2023,7 @@ ul.edl-nav--panel ul.edl-nav--tert li a{
     font-size:40px;
     text-align: center;
     color: #f4f4f4;
-    line-height: 84px;
+    line-height: 70px;
 }
 
 .edl-nav--mega{
@@ -2099,7 +2128,7 @@ ul.edl-nav--simple a{
         font-size:40px;
         text-align: center;
         color: #f4f4f4;
-        line-height: 64px;
+        line-height: 60px;
     }
 }
 /*************************************************************************************
@@ -2153,7 +2182,6 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 .edl-expand--list-action{
     position: relative;
     cursor: pointer;
-    border-bottom:1px solid #f4f4f4;
 }
 .edl-expand--list-action.no-action{
     pointer-events: none;
@@ -2163,23 +2191,24 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 }
 .edl-expand--list-action p{
     margin: 0;
-    padding: 10px 20px 10px 10px;
+	font-weight: bold;
+    padding: 10px 20px 10px 0px;
 }
 .edl-expand--list-action:after{
-    content: '\f10f';
+	content: '\f10f';
     font-family: "spark-icon-fill" !important;
     display: block;
     position: absolute;
     right: 10px;
-    top: 50%;
-    margin-top: -13px;
+    top: 10px;
+	font-size: 14px;
 }
 .edl-expand--list-action.active:after{
     content: '\f112';
 }
 .edl-expand--list-content{
     display: none;
-    padding:0 10px;
+    padding:0 0px;
 }
 .edl-expand--list-content p{
     margin:0;
@@ -2190,6 +2219,7 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 .edl-accordion--item{
     margin-top:-1px;
 }
+
 .edl-accordion--action p,
 .edl-accordion--action h1,
 .edl-accordion--action h2,
@@ -2202,29 +2232,27 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 }
 .edl-accordion .edl-accordion--action{
     padding:15px 40px 15px 20px;
-    border:1px solid #e4e4e4;
     position: relative;
     cursor:pointer;
+	font-weight: bold;
 }
-.edl-accordion .edl-accordion--action:hover{
-    border-color:#A1A1A1;
-    z-index: 1;
-    transition: border 200ms ease-in-out;
+.edl-accordion .edl-accordion--item:nth-child(even) .edl-accordion--action{
+	background: #f4f4f4;
 }
 .edl-accordion .edl-accordion--content{
     display: none;
-    border:1px solid #e4e4e4;
-    box-shadow: inset 0px 10px 10px -10px #ccc;
+    border-bottom:1px solid #eee;
     padding:0 20px 20px 20px;
 }
 .edl-accordion .edl-accordion--action:after{
-    content: '\f10f';
+	content: '\f10f';
     font-family: "spark-icon-fill" !important;
     display: block;
     position: absolute;
+	font-size: 14px;
     right: 10px;
     top: 50%;
-    margin-top: -10px;
+    margin-top: -12px;
 }
 .edl-accordion .edl-accordion--action.active:after{
     content: '\f112';
@@ -2235,6 +2263,9 @@ EXPAND/COLLAPSE & ACCORDION & TABS
     list-style: none;
     margin:0;
     padding:0;
+}
+.edl-tab ul.edl-tab--nav{
+    padding:0 15px;
 }
 .edl-tab ul.edl-tab--nav  li{
     display: inline;
@@ -2262,6 +2293,8 @@ EXPAND/COLLAPSE & ACCORDION & TABS
 }
 .edl-tab ul.edl-tab--panels li {
     display: none;
+	border:none;
+	border-top: 1px solid #e4e4e4;
 }
 .edl-tab ul.edl-tab--panels li.active {
     display: block;
@@ -2519,11 +2552,11 @@ MESSAGES & NOTIFICATIONS
 *************************************************************************************/
 .edl-message{
     padding: 20px 30px;
-    border:1px solid #e4e4e4;
     border-radius: 3px;
     margin-bottom:30px;
     background: #fff;
     overflow: hidden;
+	color: #fff;
 }
 .edl-message p{
     margin: 0;
@@ -2531,28 +2564,19 @@ MESSAGES & NOTIFICATIONS
     margin-left: 20px;
     width:85%;
 }
-.edl-message span{
-    font-size: 28px;
-    font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
-    display: block;
-    margin-bottom: 5px;
-}
 .edl-message .edl-message--icon:before{
-    font-size: 26px;
+    font-size: 18px;
     float: left;
 }
 
-.edl-message.edl-message--success p span,
-.edl-message.edl-message--success .edl-message--icon{
-    color: #75a01f;
+.edl-message.edl-message--success{
+    background: #23826F;
 }
-.edl-message.edl-message--warning p span,
-.edl-message.edl-message--warning .edl-message--icon{
-    color: #cd8511;
+.edl-message.edl-message--warning{
+    background: #dadb26;
 }
-.edl-message.edl-message--error p span,
-.edl-message.edl-message--error .edl-message--icon{
-    color: #ac0000;
+.edl-message.edl-message--error{
+    background: #ac0000;
 }
 
 /* Notices */
@@ -2593,30 +2617,23 @@ FORM ELEMENTS
 form.edl-form input[type='text'],
 form.edl-form input[type='email'],
 form.edl-form input[type='tel'],
+form.edl-form input[type='password'],
+form.edl-form input[type='number'],
+form.edl-form input[type='date'],
 form.edl-form select,
 form.edl-form textarea{
     padding:1rem 1rem  .25rem 1rem !important;
     width: 100%;
     font-size: 1rem;
     min-height: 50px;
-    border:1px solid #e4e4e4;
-    background: #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     -webkit-appearance: none !important;
+	font-size: 16px;
 }
 form.edl-form textarea{
     min-height: 150px;
     padding-top: 1.4rem !important;
 }
-form.edl-form input:focus,
-form.edl-form select:focus,
-form.edl-form textarea:focus{
-    border-color:#23826F;
-    outline: none;
-}
+
 form.edl-form label.edl-label{
     position: absolute;
     left: 1rem;
@@ -2632,7 +2649,7 @@ form.edl-form label.edl-label{
     font-size: 1rem;
 }
 form.edl-form label.has-value{
-    color: #999;
+    color: #23826F;
     font-size: .7rem;
     line-height: 1.9rem;
 }
@@ -2641,9 +2658,52 @@ form.edl-form .edl-select select {
     cursor:pointer;
     padding: 1rem;
 }
-form.edl-form .edl-select:hover select{
-    border-color:#23826F;
+/* Radio & Checkbox */
+.edl-radio,
+.edl-checkbox {
+    display:inline-block;
+    cursor: pointer;
+    position: relative;
+	padding: 6px 15px;
+    font-size: 16px;
 }
+form.edl-form .edl-checkbox,
+form.edl-form .edl-radio{
+	padding-left:40px;
+}
+form.edl-form input[type=radio],
+form.edl-form input[type=checkbox] {
+	visibility: hidden;
+	position: absolute;
+}
+form.edl-form .edl-checkbox:before,
+form.edl-form .edl-radio:before {
+    content:"";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+	background: #fff;
+	border:1px solid #e4e4e4;
+	top:50%;
+	margin-top: -15px;
+	border-radius: 50%;
+}
+form.edl-form .edl-checkbox.selected:before,
+form.edl-form .edl-radio.selected:before{
+	background: #3399cc;
+	border-width: 8px;
+	border-color: #eee;
+}
+/* Placeholders */
+form.edl-form ::-webkit-input-placeholder { color: #fff; }
+form.edl-form :focus::-webkit-input-placeholder { color: #999; }
+form.edl-form ::-moz-input-placeholder { color: #fff; }
+form.edl-form :focus::-moz-input-placeholder { color: #999; }
+form.edl-form :-moz-input-placeholder { color: #fff; }
+form.edl-form :focus:-moz-input-placeholder { color: #999; }
+form.edl-form :-ms-input-placeholder { color: #fff !important; }
 /*************************************************************************************
 SOCIAL
 *************************************************************************************/
